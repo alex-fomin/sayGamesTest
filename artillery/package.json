@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "artillery-plugin-fuzzer": "^1.0.1"
+  }
+}

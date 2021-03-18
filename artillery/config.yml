@@ -1,0 +1,22 @@
+config:
+  target: http://localhost:81/api
+  phases:
+    - duration: 60
+      arrivalRate: 500
+
+  plugins:
+    fuzzer: { }
+scenarios:
+  - flow:
+      - post:
+          url: "/event"
+          json:
+              "client_time": "2020-12-01 23:59:00"
+              "device_id": "0287D9AA-4ADF-4B37-A60F-3E9E645C821E"
+              "device_os": "iOS 13.5.1"
+              "session": "{{ naughtyString }}"
+              "sequence": 1
+              "event": "app_start"
+              "param_int": 0
+              "param_str": "some text"
+
